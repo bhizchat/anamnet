@@ -1,0 +1,579 @@
+/* ================================================
+   ANAMNET CONSTRUCTION - CUSTOM STYLES
+   Color Scheme:
+   - Primary: #003087 (Deep Blue)
+   - Secondary: #f0ad00 (Gold/Orange)
+   - Text: #333333 (Dark Gray)
+   - Background: #ffffff (White)
+   ================================================ */
+
+/* Root Variables */
+:root {
+    --primary-color: #003087;
+    --secondary-color: #f0ad00;
+    --text-color: #333333;
+    --light-bg: #f8f9fa;
+    --border-color: #e9ecef;
+    --shadow: 0 2px 8px rgba(0, 48, 135, 0.15);
+}
+
+/* ================================================
+   GLOBAL STYLES
+   ================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ================================================
+   HEADER & NAVIGATION
+   ================================================ */
+
+.bg-primary-dark {
+    background-color: var(--primary-color) !important;
+}
+
+header .navbar {
+    box-shadow: var(--shadow);
+}
+
+header .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+}
+
+header .navbar-brand img {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+header .navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+header .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+}
+
+header .nav-link:hover,
+header .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* ================================================
+   HERO SECTION
+   ================================================ */
+
+.hero-section {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 48, 135, 0.75);
+    z-index: 0;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    max-width: 800px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+}
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+
+.btn-primary-dark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-dark:hover {
+    background-color: #002060;
+    border-color: #002060;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 48, 135, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e89a00;
+    border-color: #e89a00;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 173, 0, 0.3);
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* ================================================
+   CARDS
+   ================================================ */
+
+.card {
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 48, 135, 0.2);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.gallery-card {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-image {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* ================================================
+   BOX SHADOW & UTILITIES
+   ================================================ */
+
+.box-shadow {
+    box-shadow: var(--shadow);
+}
+
+.text-primary-dark {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.bg-primary-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+/* ================================================
+   SECTIONS & LAYOUT
+   ================================================ */
+
+section {
+    padding: 4rem 0;
+}
+
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+section.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* ================================================
+   ABOUT PAGE STYLES
+   ================================================ */
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border-radius: 50%;
+}
+
+.value-icon i {
+    font-size: 2.5rem;
+}
+
+/* ================================================
+   CONTACT FORM
+   ================================================ */
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 48, 135, 0.15);
+    color: var(--text-color);
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.contact-info strong {
+    color: var(--primary-color);
+}
+
+.form-check-input {
+    border: 2px solid var(--border-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 48, 135, 0.15);
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin-top: 5rem;
+}
+
+footer h5 {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .bg-secondary {
+    background-color: rgba(240, 173, 0, 0.3) !important;
+    opacity: 0.5;
+}
+
+footer .row {
+    padding-bottom: 2rem;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 768px) {
+    header .nav-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .hero-section {
+        min-height: 400px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .display-4 {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    header .navbar-brand img {
+        height: 40px;
+    }
+
+    .hero-section {
+        min-height: 300px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-white-75 {
+        font-size: 0.9rem;
+    }
+
+    .gallery-image {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    footer .row {
+        margin-bottom: 2rem;
+    }
+
+    footer .col-md-6 {
+        margin-bottom: 2rem;
+    }
+
+    .display-4 {
+        font-size: 2rem !important;
+    }
+
+    section.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.g-4 {
+    gap: 1.5rem;
+}
+
+.g-5 {
+    gap: 3rem;
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+    header,
+    footer,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background-color: #ffffff;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
